@@ -92,7 +92,17 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             }
         }
 
+        public void display()
+        {
+            Console.WriteLine("\n---------------------");
+            Console.WriteLine(" Sorted array elements ");
+            Console.WriteLine("\n---------------------");
 
+            for (int ED = 0; ED < n; ED++)
+            {
+                Console.WriteLine(dewo[ED]);
+            }
+        }
         static void Main(string[] args)
         {
             Program mylist = new Program();
@@ -118,6 +128,7 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                             Console.WriteLine("................");
                             mylist.input();
                             mylist.insertion_sort();
+                            mylist.display();
                             break;
                         case 2:
                             Console.WriteLine("");
