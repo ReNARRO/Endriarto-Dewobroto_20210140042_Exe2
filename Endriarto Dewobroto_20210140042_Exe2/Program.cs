@@ -48,6 +48,11 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                 arr[j + 1] = temp;
             }
         }
+
+        public void merge_sort()
+        {
+
+        }
         static void Main(string[] args)
         {
         }
