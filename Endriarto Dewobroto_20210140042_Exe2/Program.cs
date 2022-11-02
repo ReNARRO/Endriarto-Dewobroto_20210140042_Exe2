@@ -84,6 +84,13 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                 k++;
             }
 
+            while(i > mid)
+            {
+                dewo[i] = temp[k];
+                i++;
+                k++;
+            }
+
 
         }
         static void Main(string[] args)
