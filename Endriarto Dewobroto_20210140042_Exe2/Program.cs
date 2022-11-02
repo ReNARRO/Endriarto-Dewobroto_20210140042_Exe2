@@ -74,6 +74,13 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                     dewo[ED] = dewo[k];
                     ED++;
                 }
+                k++;
+            }
+            while(ED > high)
+            {
+                dewo[ED] = dewo[k];
+                ED++;
+                k++;
             }
 
 
