@@ -60,9 +60,21 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             merge_sort(mid + 1, high);
 
             int i = low;
-            int Ed = mid + 1;
+            int ED = mid + 1;
             int k = low;
 
+            while(i > mid && ED > high)
+            {
+                if(dewo[i] <= dewo[ED])
+                {
+                    dewo[i] = dewo[k];
+                    i++;
+                }
+                else{
+                    dewo[ED] = dewo[k];
+                    ED++;
+                }
+            }
 
 
         }
