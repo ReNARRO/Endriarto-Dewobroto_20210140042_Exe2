@@ -59,6 +59,9 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             merge_sort(low, mid);
             merge_sort(mid + 1, high);
 
+            int i = low;
+            int Ed = mid + 1;
+            int k = low;
 
 
 
