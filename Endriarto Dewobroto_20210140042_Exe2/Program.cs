@@ -49,7 +49,7 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             }
         }
 
-        public void merge_sort(int high, int low)
+        public void merge_sort(int low, int high)
         {
             if (low >= high)
                 return;
@@ -90,11 +90,58 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                 i++;
                 k++;
             }
-
-
         }
+
+
         static void Main(string[] args)
         {
+            Program mylist = new Program();
+            int pilihanmenu;
+            char ch;
+            do
+            {
+                do
+                {
+                    Console.WriteLine("Menu Option");
+                    Console.WriteLine("=============");
+                    Console.WriteLine("1. Insertion Sort");
+                    Console.WriteLine("2. Merge Sort");
+                    Console.WriteLine("3. Exit");
+                    Console.Write(" Enter  your choice (1,2,3) : ");
+                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                    switch (pilihanmenu)
+                    {
+                        case 1:
+                            Console.WriteLine("");
+                            Console.WriteLine("................");
+                            Console.WriteLine("Insertion Sort");
+                            Console.WriteLine("................");
+                            mylist.input();
+                            mylist.insertion_sort();
+                            break;
+                        case 2:
+                            Console.WriteLine("");
+                            Console.WriteLine("................");
+                            Console.WriteLine("Merge Sort");
+                            Console.WriteLine("................");
+                            mylist.input();
+                            break;
+                        case 3:
+                            Console.WriteLine("Exit.");
+                            break;
+                        default:
+                            Console.WriteLine("Error");
+                            break;
+                    }
+                    Console.WriteLine("\n Pilih Menu Lagi? (y/n) : ");
+                    ch = char.Parse(Console.ReadLine().ToLower());
+                    Console.Clear();
+                } while (ch == 'y');
+
+                //to exit from the console
+                Console.WriteLine("\n\nPress return to exit. ");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
     }
 }
