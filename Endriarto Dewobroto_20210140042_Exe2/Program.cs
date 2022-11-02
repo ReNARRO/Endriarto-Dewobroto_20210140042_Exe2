@@ -103,6 +103,11 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                 Console.WriteLine(dewo[ED]);
             }
         }
+
+        int getsize()
+        {
+            return (n);
+        }
         static void Main(string[] args)
         {
             Program mylist = new Program();
@@ -136,6 +141,8 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                             Console.WriteLine("Merge Sort");
                             Console.WriteLine("................");
                             mylist.input();
+                            mylist.merge_sort(0, mylist.getsize());
+                            mylist.display();
                             break;
                         case 3:
                             Console.WriteLine("Exit.");
