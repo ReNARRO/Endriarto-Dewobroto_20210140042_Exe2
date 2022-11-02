@@ -59,6 +59,7 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             merge_sort(low, mid);
             merge_sort(mid + 1, high);
 
+            int[] temp = new int[26];
             int i = low;
             int ED = mid + 1;
             int k = low;
@@ -67,18 +68,18 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             {
                 if(dewo[i] <= dewo[ED])
                 {
-                    dewo[i] = dewo[k];
+                    dewo[i] = temp[k];
                     i++;
                 }
                 else{
-                    dewo[ED] = dewo[k];
+                    dewo[ED] = temp[k];
                     ED++;
                 }
                 k++;
             }
             while(ED > high)
             {
-                dewo[ED] = dewo[k];
+                dewo[ED] = temp[k];
                 ED++;
                 k++;
             }
