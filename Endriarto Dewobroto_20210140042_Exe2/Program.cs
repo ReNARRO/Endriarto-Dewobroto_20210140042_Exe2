@@ -79,14 +79,14 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             }
             while(ED > high)
             {
-                dewo[ED] = temp[k];
+                temp[k] = dewo[ED];
                 ED++;
                 k++;
             }
 
             while(i > mid)
             {
-                dewo[i] = temp[k];
+                temp[k] = dewo[i];
                 i++;
                 k++;
             }
@@ -115,51 +115,44 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             char ch;
             do
             {
-                do
+                Console.WriteLine("Menu Option");
+                Console.WriteLine("=============");
+                Console.WriteLine("1. Insertion Sort");
+                Console.WriteLine("2. Merge Sort");
+                Console.WriteLine("3. Exit");
+                Console.Write(" Enter  your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
+                switch (pilihanmenu)
                 {
-                    Console.WriteLine("Menu Option");
-                    Console.WriteLine("=============");
-                    Console.WriteLine("1. Insertion Sort");
-                    Console.WriteLine("2. Merge Sort");
-                    Console.WriteLine("3. Exit");
-                    Console.Write(" Enter  your choice (1,2,3) : ");
-                    pilihanmenu = Convert.ToInt32(Console.ReadLine());
-                    switch (pilihanmenu)
-                    {
-                        case 1:
-                            Console.WriteLine("");
-                            Console.WriteLine("................");
-                            Console.WriteLine("Insertion Sort");
-                            Console.WriteLine("................");
-                            mylist.input();
-                            mylist.insertion_sort();
-                            mylist.display();
-                            break;
-                        case 2:
-                            Console.WriteLine("");
-                            Console.WriteLine("................");
-                            Console.WriteLine("Merge Sort");
-                            Console.WriteLine("................");
-                            mylist.input();
-                            mylist.merge_sort(0, mylist.getsize());
-                            mylist.display();
-                            break;
-                        case 3:
-                            Console.WriteLine("Exit.");
-                            break;
-                        default:
-                            Console.WriteLine("Error");
-                            break;
-                    }
-                    Console.WriteLine("\n Pilih Menu Lagi? (y/n) : ");
-                    ch = char.Parse(Console.ReadLine().ToLower());
-                    Console.Clear();
-                } while (ch == 'y');
-
-                //to exit from the console
-                Console.WriteLine("\n\nPress return to exit. ");
-                Console.ReadLine();
-            } while (pilihanmenu != 3);
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("................");
+                        Console.WriteLine("Insertion Sort");
+                        Console.WriteLine("................");
+                        mylist.input();
+                        mylist.insertion_sort();
+                        mylist.display();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("................");
+                        Console.WriteLine("Merge Sort");
+                        Console.WriteLine("................");
+                        mylist.input();
+                        mylist.merge_sort(0, mylist.getsize());
+                        mylist.display();
+                        break;
+                    case 3:
+                        Console.WriteLine("Exit.");
+                        break;
+                    default:
+                        Console.WriteLine("Error");
+                        break;
+                }
+                Console.WriteLine("\n Pilih Menu Lagi? (y/n) : ");
+                ch = char.Parse(Console.ReadLine().ToLower());
+                Console.Clear();
+            } while (ch == 'y');
         }
     }
 }
