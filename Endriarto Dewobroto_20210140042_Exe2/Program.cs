@@ -8,7 +8,7 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
 {
     class Program
     {
-        private int[] arr = new int[20];
+        private int[] dewo = new int[26];
         private int n;
         public void input()
         {
@@ -31,26 +31,36 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
             {
                 Console.Write("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
-                arr[i] = Int32.Parse(s1);
+                dewo[i] = Int32.Parse(s1);
             }
         }
         public void insertion_sort()
         {
             for (int i = 1; i < n; i++)
             {
-                int temp = arr[i];
-                int j = i - 1;
-                while (j >= 0 && arr[j] > temp)
+                int temp = dewo[i];
+                int ED = i - 1;
+                while (ED >= 0 && dewo[ED] > temp)
                 {
-                    arr[j + 1] = arr[j];
-                    j--;
+                    dewo[ED + 1] = dewo[ED];
+                    ED--;
                 }
-                arr[j + 1] = temp;
+                dewo[ED + 1] = temp;
             }
         }
 
-        public void merge_sort()
+        public void merge_sort(int high, int low)
         {
+            if (low >= high)
+                return;
+
+            int mid = (low + high) / 2;
+
+            merge_sort(low, mid);
+            merge_sort(mid + 1, high);
+
+
+
 
         }
         static void Main(string[] args)
