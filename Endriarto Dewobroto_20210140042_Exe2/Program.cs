@@ -8,6 +8,8 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
 {
     class Program
     {
+        private int[] arr = new int[20];
+        private int n;
         public void input()
         {
             while (true)
@@ -19,6 +21,17 @@ namespace Endriarto_Dewobroto_20210140042_Exe2
                     break;
                 else
                     Console.WriteLine("\nArray can have maximum 20 elements \n");
+            }
+            Console.WriteLine("\n=======================");
+            Console.WriteLine("Enter Array Element");
+            Console.WriteLine("\n=======================");
+
+            //get array elements
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                arr[i] = Int32.Parse(s1);
             }
         }
         public void insertion_sort()
